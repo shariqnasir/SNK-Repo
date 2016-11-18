@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" data-ng-app="KashmirFoodApp">
+<head>
+    <title></title>
+
+</head>
+<body>
+    <div  data-ng-controller="indexController">
+        <div>
+            <ul>
+                <li data-ng-hide="!authentication.isAuth"><a href="#">Welcome {{authentication.userName}}</a></li>
+                <li data-ng-hide="!authentication.isAuth"><a href="#/orders">My Orders</a></li>
+                <li data-ng-hide="!authentication.isAuth"><a href="" data-ng-click="logOut()">Logout</a></li>
+                <li data-ng-hide="authentication.isAuth"> <a href="#/login">Login</a></li>
+                <li data-ng-hide="authentication.isAuth"> <a href="#/signup">Sign Up</a></li>
+            </ul>
+        </div>
+     </div>
+    <div class="container">
+        <div data-ng-view="">
+        </div>
+    </div>
+
+    <!-- 3rd party libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-route.min.js"></script>
+    <script src="scripts/angular-local-storage.min.js"></script>
+    <script src="scripts/loading-bar.js"></script>
+    <!-- Load app main script -->
+
+    <!-- Load app main script -->
+    <script src="app/app.js"></script>
+    <!-- Load services -->
+    <script src="app/services/authInterceptorService.js"></script>
+    <script src="app/services/authService.js"></script>
+    <script src="app/services/restaurantService.js"></script>
+    <!-- Load controllers -->
+    <script src="app/controllers/indexController.js"></script>
+    <script src="app/controllers/homeController.js"></script>
+    <script src="app/controllers/loginController.js"></script>
+    <script src="app/controllers/signupController.js"></script>
+  
+</body>
+</html>

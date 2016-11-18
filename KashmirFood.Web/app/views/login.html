@@ -1,0 +1,9 @@
+﻿<form >
+    <h2 >Login</h2>
+    <input type="text"  placeholder="Username" data-ng-model="loginData.userName" required autofocus>
+    <input type="password"  placeholder="Password" data-ng-model="loginData.password" required>
+    <button  type="submit" data-ng-click="login()">Login</button>
+    <div data-ng-hide="message == ''" >
+        {{message}}
+    </div>
+</form>
